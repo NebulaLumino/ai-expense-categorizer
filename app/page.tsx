@@ -24,6 +24,12 @@ export default function ExpenseCategorizer() {
     setLoading(false);
   };
 
+  const placeholder = `Example entries (one per line):
+Office Depot $124.50 - office supplies
+AWS $450.00 - cloud hosting
+Delta Airlines $320 - client travel
+Starbucks $18.50 - team coffee meeting`;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-950 to-gray-900 text-white font-sans">
       <header className="border-b border-white/10">
@@ -44,7 +50,7 @@ export default function ExpenseCategorizer() {
           <textarea
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="e.g., Office Depot $124.50 - office supplies&#10;AWS $450.00 - cloud hosting&#10;Delta Airlines $320 - client travel..."
+            placeholder={placeholder}
             className="w-full h-52 bg-white/5 border border-white/10 rounded-xl p-4 text-sm text-white placeholder-gray-500 resize-none focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
           />
           <div className="flex items-center justify-between">
